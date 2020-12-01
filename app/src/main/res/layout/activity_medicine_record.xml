@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/rlayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:layout_marginTop="15dp"
+
+
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    >
+    <androidx.cardview.widget.CardView
+        android:id="@+id/medicinedetailscv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        card_view:cardCornerRadius="12dp"
+        card_view:cardElevation="1dp"
+        >
+        <TextView
+            android:id="@+id/tvtitlelabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/tvicon"
+            android:layout_toRightOf="@id/tvicon"
+            android:textSize="18sp"
+            android:text="Medicine Name: "
+            android:maxLines="1"
+            android:ellipsize="end"
+            />
+        <TextView
+            android:id="@+id/tvtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/tvtitlelabel"
+            android:layout_toRightOf="@id/tvtitlelabel"
+            android:textSize="18sp"
+            android:text="Medicine Name: "
+            android:maxLines="1"
+            android:ellipsize="end"
+            />
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="50dp"
+            android:textSize="18sp"
+            android:text="Dosage: "
+
+            />
+        <TextView
+            android:id="@+id/dosage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="50dp"
+            android:textSize="18sp"
+            android:text="Dosage: "
+
+            />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="90dp"
+            android:textSize="18sp"
+            android:text="Time: "
+
+            />
+
+        <TextView
+            android:id="@+id/datetime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="90dp"
+            android:textSize="18sp"
+            android:text="Time: "
+
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="130dp"
+            android:textSize="18sp"
+            android:text="Reminder Time: "
+
+            />
+
+        <TextView
+            android:id="@+id/remindertimes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="130dp"
+            android:textSize="18sp"
+            android:text="Reminder Time: "
+
+            />
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/DeleteMedicine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_below="@+id/medicinedetailscv"
+        android:layout_marginTop="90dp"
+        android:textSize="17sp"
+        android:text="Delete Medicine "
+        android:onClick="setupdeletemedicine"
+        android:textColor="@color/white"
+        android:background="@drawable/deletemedicinebuttonstyle"
+
+        />
+
+
+
+
+
+</RelativeLayout>

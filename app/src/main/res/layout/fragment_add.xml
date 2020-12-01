@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <EditText
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:maxLength="20"
+        android:textSize="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:hint="Medicine Name"
+        android:textColor="@color/materialdark"
+        android:background="@drawable/edittextstyle"/>
+
+
+    <TextView
+        android:id="@+id/dosage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="22dp"
+        android:textSize="20sp"
+        android:text="Dosage:"
+        android:textAppearance="?android:attr/textAppearanceMedium"/>
+    <EditText
+        android:id="@+id/dosageet"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintLeft_toRightOf="@+id/date_string"
+        android:entries="@array/day_array"
+        />
+
+    <TextView
+        android:id="@+id/date_string"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dosage"
+        app:layout_constraintTop_toBottomOf="@+id/dosage"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="22dp"
+        android:layout_marginLeft="22dp"
+        android:textSize="20sp"
+        android:text="Reminder Times:"
+        android:textAppearance="?android:attr/textAppearanceMedium"/>
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/dayspinner"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/dosage"
+        app:layout_constraintLeft_toRightOf="@+id/date_string"
+        android:entries="@array/day_array"
+        />
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:layout_marginLeft="22dp"
+        android:text="Time:"
+        android:textSize="20sp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        app:layout_constraintTop_toBottomOf="@+id/date_string"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/timespinner"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/dayspinner"
+        app:layout_constraintLeft_toRightOf="@+id/date_string"
+        android:entries="@array/time_array"
+        />
+
+    <Button
+        android:id="@+id/addschedulebutton"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/homepagebuttonstyle"
+        android:drawableRight="@drawable/ic_alarm_black_24dp"
+        android:text="Add Schedule"
+        android:textColor="@color/white"
+        android:layout_marginTop="400dp"
+        app:layout_constraintBottom_toBottomOf="@id/timespinner"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
